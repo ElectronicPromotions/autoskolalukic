@@ -1,11 +1,11 @@
 /* =========================================================
-   RASPORED PREDAVANJA  do  Autoškola Lukić
+   RASPORED PREDAVANJA: Autoškola Lukić
    ---------------------------------------------------------
    • Svaka grupa je jedan blok { ... } u listi "grupe".
    • Datum se piše kao "GGGG-MM-DD" (npr. "2026-11-18").
    • Vrijeme se piše kao "17:00 do 18:30".
    • Kandidate upisujte kao "Ime P." (ime + početno slovo prezimena)
-      do  stranica je javna, pa je tako bolje za privatnost kandidata.
+     (stranica je javna, pa je tako bolje za privatnost kandidata.)
    • Kad upišete stvarni raspored, promijenite  primjer: true  u  primjer: false
    ========================================================= */
 window.PREDAVANJA = {
@@ -35,7 +35,7 @@ window.PREDAVANJA = {
       kategorija: "B",
       predavac: "Doc. dr Violeta Lukić Vujadinović",
       mjesto: "Učionica, Tina Ujevića 8",
-      napomena: "Večernji termin  do  pogodno za zaposlene.",
+      napomena: "Večernji termin, pogodno za zaposlene.",
       termini: [
         { datum: "2026-11-24", vrijeme: "19:00 do 20:30", tema: "Uvod u saobraćajne propise" },
         { datum: "2026-11-26", vrijeme: "19:00 do 20:30", tema: "Znakovi opasnosti" },
