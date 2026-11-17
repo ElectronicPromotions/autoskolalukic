@@ -4,7 +4,7 @@ import os, re
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CARSYM = open(os.path.join(HERE, 'carsym.svg'), encoding='utf-8').read()
-DOMAIN = 'https://autoskolalukic.com'
+DOMAIN = 'https://autoskolalukic.vercel.app'
 ORG = {"@id": DOMAIN + '/#autoskola'}
 
 # Cijene: upišite iznos (npr. '1.150 KM') ili ostavite None, pa se prikazuje "Na upit"

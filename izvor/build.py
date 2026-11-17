@@ -8,7 +8,7 @@ sys.path.insert(0, ROOT)
 import sadrzaj as S
 
 OUT = os.path.join(ROOT, '..', 'sajt')
-DOMAIN = 'https://autoskolalukic.com'
+DOMAIN = 'https://autoskolalukic.vercel.app'
 DATUM = '2026-11-17'
 VER = '4'
 
@@ -252,5 +252,5 @@ for u, pr, fr, imgs in SITEMAP:
     sm.append(f'  <url><loc>{u}</loc><lastmod>{DATUM}</lastmod><changefreq>{fr}</changefreq><priority>{pr}</priority>{im}</url>')
 sm.append('</urlset>\n')
 open(os.path.join(OUT, 'sitemap.xml'), 'w', encoding='utf-8').write('\n'.join(sm))
-open(os.path.join(OUT, 'robots.txt'), 'w').write('User-agent: *\nAllow: /\n\nSitemap: https://autoskolalukic.com/sitemap.xml\n')
+open(os.path.join(OUT, 'robots.txt'), 'w').write('User-agent: *\nAllow: /\n\nSitemap: https://autoskolalukic.vercel.app/sitemap.xml\n')
 print('Generisano stranica:', len(SITEMAP), '+ 404')

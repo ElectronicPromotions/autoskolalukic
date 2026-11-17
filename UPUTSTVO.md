@@ -61,7 +61,7 @@ Otvorite fajl i mijenjajte grupe. Svaka grupa izgleda ovako:
 
 Od tada se sve mijenja samo u tabeli, a sajt čita tabelu pri svakom otvaranju (Google osvježava objavljeni CSV u roku od nekoliko minuta).
 
-Kandidat može otvoriti i direktan link: `https://autoskolalukic.com/predavanja/?ime=Amar` i stranica odmah pokaže njegovu grupu.
+Kandidat može otvoriti i direktan link: `https://autoskolalukic.vercel.app/predavanja/?ime=Amar` i stranica odmah pokaže njegovu grupu.
 
 ---
 
@@ -106,7 +106,8 @@ Generator ponovo napravi sve stranice, `sitemap.xml` i `robots.txt` u folderu `s
 (Fajlovi `podaci/*.js`, `assets/main.js`, `assets/podaci.js` i `assets/postavke.js` generator ne dira, mijenjaju se direktno.)
 
 ## 5. Objava
-Sadržaj foldera `sajt/` ide u root repozitorija/hostinga (tu su i `CNAME`, ikone, `site.webmanifest`, `og-image.jpg`).
+Sajt je na Vercelu: https://autoskolalukic.vercel.app. Repozitorij ElectronicPromotions/autoskolalukic je povezan sa Vercelom, pa svaki push na granu `main` automatski objavi novu verziju (`vercel.json` kaže Vercelu da objavi folder `sajt/`).
+Ako se kasnije kupi vlastiti domen, u `izvor/build.py` i `izvor/sadrzaj.py` promijenite `DOMAIN`, pokrenite generator i dodajte domen u Vercel projekat.
 Lokalni pregled: `cd sajt && python3 -m http.server 8000` → http://localhost:8000
 (Dupli klik na .html neće raditi ispravno jer linkovi počinju sa `/`.)
 

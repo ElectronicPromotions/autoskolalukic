@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://autoskolalukic.com/sitemap.xml
+Sitemap: https://autoskolalukic.vercel.app/sitemap.xml
