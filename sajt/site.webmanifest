@@ -4,8 +4,8 @@
   "description": "Autoškola Lukić Brčko, 25 godina iskustva",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#A61B1B",
-  "theme_color": "#A61B1B",
+  "background_color": "#FFCC00",
+  "theme_color": "#FFCC00",
   "lang": "bs",
   "icons": [
     {

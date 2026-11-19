@@ -42,7 +42,7 @@
       out+='<div class="ly" style="transform:translateZ('+z+'px);background:rgb('+(shade+60)+','+(shade+20)+',0)"></div>';}
     out+='<div class="ly ft" style="transform:translateZ('+(L/2*2.2+1)+'px)">'
        +'<svg viewBox="0 0 200 200"><defs><path id="cp" d="M100 100 m-78 0 a78 78 0 1 1 156 0 a78 78 0 1 1 -156 0"/></defs>'
-       +'<text font-size="11" font-weight="800" fill="#A61B1B" letter-spacing="4.4" font-family="Montserrat,Arial,sans-serif"><textPath href="#cp">AUTOŠKOLA LUKIĆ • BRČKO • AUTOŠKOLA LUKIĆ • BRČKO •</textPath></text></svg>'
+       +'<text font-size="11" font-weight="800" fill="#FFCC00" letter-spacing="4.4" font-family="Montserrat,Arial,sans-serif"><textPath href="#cp">AUTOŠKOLA LUKIĆ • BRČKO • AUTOŠKOLA LUKIĆ • BRČKO •</textPath></text></svg>'
        +'<div style="position:relative"><b>25</b><small>godina</small></div></div>';
     coin.innerHTML=out;
   }

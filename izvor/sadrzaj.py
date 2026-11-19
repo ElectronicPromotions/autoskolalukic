@@ -133,7 +133,7 @@ def home():
     faq = ''.join(f'<details class="fq"{" open" if i == 0 else ""}><summary><span class="fn">{i+1:02d}</span><span>{q}</span></summary><p>{a}</p></details>' for i, (q, a) in enumerate(HOME_FAQ))
     tag = '<span class="tag">NAJTRAŽENIJA</span>'
     kat_cards = ''.join(f'<a class="card tilt{" hot" if b == "B" else ""}" href="{p}"><i class="gl"></i>{tag if b == "B" else ""}<span class="lt2">{b}</span><h3>{n} u Brčkom</h3><p>{t}</p><span class="more">Detalji obuke →</span></a>' for p, b, n, t in ALL_KAT)
-    kat_cards += '<a class="card tilt" href="/teorijska-nastava/" style="background:linear-gradient(145deg,#DC2626,var(--blue-d));color:#fff;border:0"><i class="gl"></i><span class="lt2">Dr</span><h3>Teoretska nastava</h3><p style="color:#F6E7E1">Moderna učionica i predavač sa doktoratom iz oblasti saobraćaja. Gradivo učiš s razumijevanjem, ne napamet.</p><span class="more" style="color:var(--yel)">O predavanjima →</span></a>'
+    kat_cards += '<a class="card tilt" href="/teorijska-nastava/" style="background:linear-gradient(145deg,#2A2A2A,var(--blue-d));color:#fff;border:0"><i class="gl"></i><span class="lt2">Dr</span><h3>Teoretska nastava</h3><p style="color:#EEEEEE">Moderna učionica i predavač sa doktoratom iz oblasti saobraćaja. Gradivo učiš s razumijevanjem, ne napamet.</p><span class="more" style="color:var(--yel)">O predavanjima →</span></a>'
     hero = f'''<section id="pocetna" class="hero">
   <div class="orb o1"></div><div class="orb o2"></div>
   <div class="wrap hg">
