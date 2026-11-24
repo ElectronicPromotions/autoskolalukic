@@ -141,7 +141,7 @@ def footer():
 {col(L)}
 {col(D)}
 </div>
-<div class="fb"><span>© 2026 Autoškole Brčko</span><span>Izrada stranice: <b style="color:#fff;font-weight:600">RbcWeb</b></span><nav aria-label="Društvene mreže">{soc}</nav></div>
+<div class="fb"><span>© 2026 Autoškole Brčko</span><span>Izrada stranice: <a href="https://www.rbcweb.top/" target="_blank" rel="noopener" style="color:#fff;font-weight:600;text-decoration:underline;text-underline-offset:3px">RbcWeb</a></span><nav aria-label="Društvene mreže">{soc}</nav></div>
 </div>
 </footer>
 <script src="/assets/main.js" defer></script>
