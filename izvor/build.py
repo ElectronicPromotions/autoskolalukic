@@ -89,7 +89,7 @@ def head(title, desc, path):
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
 <link rel="canonical" href="{DOMAIN}{path}">
-<meta property="og:type" content="website"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{DOMAIN}{path}"><meta property="og:image" content="{DOMAIN}/og-image.png"><meta property="og:locale" content="bs_BA">
+<meta property="og:type" content="website"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{DOMAIN}{path}"><meta property="og:image" content="{DOMAIN}/og-autoskole-brcko.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Autoškole Brčko: Autoškola Lukić i Autoškola DrivePro"><meta property="og:site_name" content="Autoškole Brčko"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="{DOMAIN}/og-autoskole-brcko.jpg"><meta property="og:locale" content="bs_BA">
 <meta name="theme-color" content="#1F2329">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon-32.png" sizes="32x32"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/assets/style.css">
