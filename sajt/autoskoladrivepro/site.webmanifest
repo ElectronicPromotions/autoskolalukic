@@ -1,0 +1,28 @@
+{
+  "name": "Autoškola DrivePro Brčko",
+  "short_name": "DrivePro",
+  "description": "Autoškola DrivePro Brčko: besplatna teoretska nastava, kategorije A, B, C1, C, CE i D",
+  "start_url": "/autoskoladrivepro/",
+  "display": "standalone",
+  "background_color": "#16257A",
+  "theme_color": "#16257A",
+  "lang": "bs",
+  "icons": [
+    {
+      "src": "/autoskoladrivepro/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/autoskoladrivepro/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/autoskoladrivepro/maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

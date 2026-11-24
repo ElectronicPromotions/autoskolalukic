@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://autoskoladrivepro.vercel.app/sitemap.xml

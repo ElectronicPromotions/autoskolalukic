@@ -7,25 +7,34 @@
   "trailingSlash": true,
   "headers": [
     {
-      "source": "/img/(.*)",
+      "source": "/(autoskolalukic|autoskoladrivepro)/img/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=2592000"
+          "value": "public, max-age=2592000, stale-while-revalidate=86400"
         }
       ]
     },
     {
-      "source": "/assets/(.*)",
+      "source": "/((autoskolalukic|autoskoladrivepro)/)?assets/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=86400"
+          "value": "public, max-age=31536000, immutable"
         }
       ]
     },
     {
-      "source": "/podaci/(.*)",
+      "source": "/(.*)\\.(png|ico|svg|jpg|webmanifest)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800"
+        }
+      ]
+    },
+    {
+      "source": "/(autoskolalukic|autoskoladrivepro)/podaci/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
@@ -45,6 +54,108 @@
           "value": "strict-origin-when-cross-origin"
         }
       ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/autoskolalukic/cjenovnik/",
+      "destination": "/autoskolalukic/",
+      "permanent": true
+    },
+    {
+      "source": "/autoskolalukic/predavanja/",
+      "destination": "/autoskolalukic/",
+      "permanent": true
+    },
+    {
+      "source": "/lukic/",
+      "destination": "/autoskolalukic/",
+      "permanent": true
+    },
+    {
+      "source": "/drivepro/",
+      "destination": "/autoskoladrivepro/",
+      "permanent": true
+    },
+    {
+      "source": "/upis/",
+      "destination": "/autoskolalukic/upis/",
+      "permanent": true
+    },
+    {
+      "source": "/novosti/",
+      "destination": "/autoskolalukic/novosti/",
+      "permanent": true
+    },
+    {
+      "source": "/kontakt/",
+      "destination": "/autoskolalukic/kontakt/",
+      "permanent": true
+    },
+    {
+      "source": "/instruktori/",
+      "destination": "/autoskolalukic/instruktori/",
+      "permanent": true
+    },
+    {
+      "source": "/o-nama/",
+      "destination": "/autoskolalukic/o-nama/",
+      "permanent": true
+    },
+    {
+      "source": "/kategorije/",
+      "destination": "/autoskolalukic/kategorije/",
+      "permanent": true
+    },
+    {
+      "source": "/pitanja/",
+      "destination": "/autoskolalukic/pitanja/",
+      "permanent": true
+    },
+    {
+      "source": "/galerija/",
+      "destination": "/autoskolalukic/galerija/",
+      "permanent": true
+    },
+    {
+      "source": "/teorijska-nastava/",
+      "destination": "/autoskolalukic/teorijska-nastava/",
+      "permanent": true
+    },
+    {
+      "source": "/a-kategorija/",
+      "destination": "/autoskolalukic/a-kategorija/",
+      "permanent": true
+    },
+    {
+      "source": "/b-kategorija/",
+      "destination": "/autoskolalukic/b-kategorija/",
+      "permanent": true
+    },
+    {
+      "source": "/c-kategorija/",
+      "destination": "/autoskolalukic/c-kategorija/",
+      "permanent": true
+    },
+    {
+      "source": "/ce-kategorija/",
+      "destination": "/autoskolalukic/ce-kategorija/",
+      "permanent": true
+    },
+    {
+      "source": "/d-kategorija/",
+      "destination": "/autoskolalukic/d-kategorija/",
+      "permanent": true
+    },
+    {
+      "source": "/cjenovnik/",
+      "destination": "/autoskolalukic/",
+      "permanent": true
+    },
+    {
+      "source": "/predavanja/",
+      "destination": "/autoskolalukic/",
+      "permanent": true
     }
   ]
 }

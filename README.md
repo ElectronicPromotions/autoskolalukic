@@ -1,7 +1,18 @@
-# Autoškola Lukić, Brčko
+# Autoškole Brčko (autoskolebrcko.com)
 
-Web stranica Autoškole Lukić, objavljena na https://autoskolalukic.vercel.app (Vercel, automatski sa grane main).
+Jedan sajt, jedan domen:
+- `/`: zajednička početna Autoškole Brčko
+- `/autoskolalukic/`: cijeli sajt Autoškole Lukić
+- `/autoskoladrivepro/`: cijeli sajt Autoškole DrivePro
 
-* `sajt/` statički sajt koji Vercel objavljuje (vidi `vercel.json`)
-* `izvor/` generator stranica: `python3 izvor/build.py` ponovo pravi HTML u `sajt/`
-* `UPUTSTVO.md` kako se mijenjaju raspored predavanja, objave i cijene
+Folderi:
+- `sajt/`: gotov sajt za objavu (Vercel čita `vercel.json`, izlaz je `sajt/`).
+- `izvor/`: generator zajedničkog dijela. Podaci o školama su u `izvor/build.py` (SKOLE, TIM, KATEGORIJE).
+- `lukic/`: izvor i gotov sajt Autoškole Lukić.
+- `drivepro/`: izvor i gotov sajt Autoškole DrivePro (uputstvo u `drivepro/UPUTSTVO.md`).
+
+Izmjene:
+1. Lukić: `cd lukic/izvor && python3 build.py`; DrivePro: `cd drivepro/izvor && python3 build.py`
+2. Sve zajedno: `cd izvor && python3 build.py`. Ovo pravi zajedničku početnu, pa kopira sajtove škola u `sajt/autoskolalukic/` i `sajt/autoskoladrivepro/` i sve njihove linkove prebacuje pod te putanje.
+
+Podaci škola za zajedničku početnu (adresa, telefoni, kategorije, Facebook) su u `izvor/build.py`, rječnik `SKOLE`.

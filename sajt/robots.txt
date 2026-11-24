@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://autoskolalukic.vercel.app/sitemap.xml
+Sitemap: https://autoskolebrcko.com/sitemap.xml
+Sitemap: https://autoskolebrcko.com/autoskolalukic/sitemap.xml
+Sitemap: https://autoskolebrcko.com/autoskoladrivepro/sitemap.xml

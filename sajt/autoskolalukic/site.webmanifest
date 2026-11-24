@@ -1,0 +1,28 @@
+{
+  "name": "Autoškola Lukić Brčko",
+  "short_name": "Autoškola Lukić",
+  "description": "Autoškola Lukić Brčko, 25 godina iskustva",
+  "start_url": "/autoskolalukic/",
+  "display": "standalone",
+  "background_color": "#FFCC00",
+  "theme_color": "#FFCC00",
+  "lang": "bs",
+  "icons": [
+    {
+      "src": "/autoskolalukic/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/autoskolalukic/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/autoskolalukic/maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
