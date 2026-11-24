@@ -263,3 +263,9 @@ footer{margin-top:96px;background:var(--g);color:#fff}
 .fbb .btn.alt{background:var(--g)}
 .fbb .btn.alt:hover{background:#000}
 @media(max-width:600px){.fbw iframe{height:560px}.fbc{padding:20px}}
+
+/* ===== WCAG 2.2 AA ===== */
+.foto{color:#B4BAC2}
+.sbtn small{opacity:1}
+.link,.strip a,.ci a,.fb span a,.fb nav a,.ft h4 a{display:inline-block;padding-block:4px;margin-block:-4px}
+.ft a.ph{padding-block:3px}

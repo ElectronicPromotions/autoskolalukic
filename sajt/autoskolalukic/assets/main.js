@@ -31,7 +31,7 @@
     items.forEach(function(t){h+='<span>★ '+t+'</span>'});
     mq.innerHTML=h;
     var mqs=$$('#mq span'),mi=0;mqs[0].classList.add('on');
-    setInterval(function(){if(d.hidden)return;mqs[mi].classList.remove('on');mi=(mi+1)%mqs.length;mqs[mi].classList.add('on')},2400);
+    var mqT=setInterval(function(){if(d.hidden)return;mqs[mi].classList.remove('on');mi=(mi+1)%mqs.length;mqs[mi].classList.add('on')},2400);setTimeout(function(){clearInterval(mqT)},5000);
   }
 
   // 3D kovanica "25"
@@ -41,7 +41,7 @@
     for(var i=0;i<L;i++){var z=(i-L/2)*2.2,shade=Math.round(120+i*6);
       out+='<div class="ly" style="transform:translateZ('+z+'px);background:rgb('+(shade+60)+','+(shade+20)+',0)"></div>';}
     out+='<div class="ly ft" style="transform:translateZ('+(L/2*2.2+1)+'px)">'
-       +'<svg viewBox="0 0 200 200"><defs><path id="cp" d="M100 100 m-78 0 a78 78 0 1 1 156 0 a78 78 0 1 1 -156 0"/></defs>'
+       +'<svg viewBox="0 0 200 200" aria-hidden="true" focusable="false"><defs><path id="cp" d="M100 100 m-78 0 a78 78 0 1 1 156 0 a78 78 0 1 1 -156 0"/></defs>'
        +'<text font-size="11" font-weight="800" fill="#C2410C" letter-spacing="4.4" font-family="Montserrat,Arial,sans-serif"><textPath href="#cp">AUTOŠKOLA LUKIĆ • BRČKO • AUTOŠKOLA LUKIĆ • BRČKO •</textPath></text></svg>'
        +'<div style="position:relative"><b>25</b><small>godina</small></div></div>';
     coin.innerHTML=out;
@@ -120,3 +120,13 @@
     d.addEventListener('keydown',function(e){if(!lb.classList.contains('on'))return;if(e.key==='Escape')close();else if(e.key==='ArrowLeft')show(cur-1);else if(e.key==='ArrowRight')show(cur+1)});
   }
 })();
+
+/* WCAG 2.2.2: ukrasni pokret staje nakon 5 sekundi */
+(function(){function stop(){document.documentElement.classList.add('still');if(document.getAnimations)document.getAnimations().forEach(function(a){try{if(a.effect&&a.effect.getTiming().iterations===Infinity)a.pause()}catch(e){}})}
+setTimeout(stop,5000);})();
+/* WCAG 1.4.13: Escape zatvara padajući meni (i kad je otvoren mišem ili fokusom) i vraća fokus na dugme */
+(function(){document.querySelectorAll('nav.d .dd').forEach(function(dd){var b=dd.querySelector('button');if(!b)return;
+  dd.addEventListener('keydown',function(e){if(e.key==='Escape'){dd.classList.add('x');b.setAttribute('aria-expanded','false');b.focus();}});
+  dd.addEventListener('mouseleave',function(){dd.classList.remove('x')});
+  dd.addEventListener('focusout',function(e){if(!dd.contains(e.relatedTarget))dd.classList.remove('x')});
+  b.addEventListener('click',function(){dd.classList.remove('x')});});})();

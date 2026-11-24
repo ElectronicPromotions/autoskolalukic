@@ -87,10 +87,10 @@ def footer():
       <p>Autoškola u Brčkom za kategorije A, B, C1, C, CE i D. Besplatna teoretska nastava, plaćanje do 5 rata i termini vožnje po tvom izboru.</p>
       <a class="ig" href="https://www.instagram.com/driveproautoskola" target="_blank" rel="noopener">📸 @driveproautoskola</a>
     </div>
-    <div><h4>Obuka</h4>{k}<a href="/kategorije/">Sve kategorije</a></div>
-    <div><h4>Stranica</h4>{s}</div>
+    <div><h2 class="fh">Obuka</h2>{k}<a href="/kategorije/">Sve kategorije</a></div>
+    <div><h2 class="fh">Stranica</h2>{s}</div>
     <div>
-      <h4>Kontakt</h4>
+      <h2 class="fh">Kontakt</h2>
       <span>📍 Hasana Bećirevića 3, 76100 Brčko</span>
       <a href="tel:+38765803456">📞 Dalibor: 065 803 456</a>
       <a href="tel:+38765858411">📞 Vladana: 065 858 411</a>

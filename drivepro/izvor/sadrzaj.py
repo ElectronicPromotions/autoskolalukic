@@ -88,7 +88,7 @@ def gal_html(items):
 def gal_block():
     if GAL:
         return f'<div class="gal rvl">{gal_html(GAL)}</div>'
-    return f'''<div class="igcta rvl"><div class="igi" aria-hidden="true">📸</div><div><h3>Naše kandidate objavljujemo na Instagramu</h3><p>Položeni ispiti, čestitke i trenuci sa obuke su na profilu <b>@driveproautoskola</b>.</p></div><a class="btn btn-y" href="{IG}" target="_blank" rel="noopener">Otvori Instagram →</a></div>'''
+    return f'''<div class="igcta rvl"><div class="igi" aria-hidden="true">📸</div><div><h2 class="igh">Naše kandidate objavljujemo na Instagramu</h2><p>Položeni ispiti, čestitke i trenuci sa obuke su na profilu <b>@driveproautoskola</b>.</p></div><a class="btn btn-y" href="{IG}" target="_blank" rel="noopener">Otvori Instagram →</a></div>'''
 
 
 # ---------------------------------------------------------------- HOME
@@ -176,10 +176,10 @@ def home():
       <li><b>{ADR}</b><span>Brčko, 065 803 456</span></li>
     </ul>
     <div class="g4 rvl">
-      <div class="card tilt"><i class="gl"></i><div class="ico">🗓️</div><h3>Ti biraš termine</h3><p>Termine časova vožnje i ispita biraš sam, pa se obuka uklapa u školu ili posao.</p></div>
-      <div class="card tilt"><i class="gl"></i><div class="ico">🎓</div><h3>Stručni instruktori</h3><p>Obuku vode Dalibor i Vladana Vujadinović, diplomirani inženjeri saobraćaja.</p></div>
-      <div class="card tilt"><i class="gl"></i><div class="ico">🤝</div><h3>Bez straha od vožnje</h3><p>Individualan pristup i radionice za prevazilaženje straha od vožnje. Svaka greška dobije objašnjenje, a ne ukor.</p></div>
-      <div class="card tilt"><i class="gl"></i><div class="ico">💳</div><h3>Besplatna teorija i rate</h3><p>Teoretska nastava je besplatna, a ostatak obuke možeš platiti u do 5 rata.</p></div>
+      <div class="card tilt"><i class="gl"></i><div class="ico" aria-hidden="true">🗓️</div><h3>Ti biraš termine</h3><p>Termine časova vožnje i ispita biraš sam, pa se obuka uklapa u školu ili posao.</p></div>
+      <div class="card tilt"><i class="gl"></i><div class="ico" aria-hidden="true">🎓</div><h3>Stručni instruktori</h3><p>Obuku vode Dalibor i Vladana Vujadinović, diplomirani inženjeri saobraćaja.</p></div>
+      <div class="card tilt"><i class="gl"></i><div class="ico" aria-hidden="true">🤝</div><h3>Bez straha od vožnje</h3><p>Individualan pristup i radionice za prevazilaženje straha od vožnje. Svaka greška dobije objašnjenje, a ne ukor.</p></div>
+      <div class="card tilt"><i class="gl"></i><div class="ico" aria-hidden="true">💳</div><h3>Besplatna teorija i rate</h3><p>Teoretska nastava je besplatna, a ostatak obuke možeš platiti u do 5 rata.</p></div>
     </div>
     <p class="ctr"><a class="more-link" href="/o-nama/">Više o Autoškoli DrivePro →</a></p>
     <div class="quick rvl">
@@ -261,10 +261,10 @@ def home():
     <h2 class="t rvl">Autoškola Brčko: <em>kontakt i lokacija</em></h2>
     <div class="ct rvl">
       <div class="card tilt"><i class="gl"></i>
-        <div class="row"><div class="ico">📍</div><div><small>Adresa</small><b>{ADR}, 76100 Brčko</b></div></div>
-        <div class="row"><div class="ico">📞</div><div><small>Dalibor: upis, informacije i časovi vožnje</small><a href="tel:+38765803456"><b>065 803 456</b></a></div></div>
-        <div class="row"><div class="ico">📞</div><div><small>Vladana: informacije i teorijska nastava</small><a href="tel:+38765858411"><b>065 858 411</b></a></div></div>
-        <div class="row"><div class="ico">📸</div><div><small>Instagram</small><a href="{IG}" target="_blank" rel="noopener"><b>@driveproautoskola</b></a></div></div>
+        <div class="row"><div class="ico" aria-hidden="true">📍</div><div><small>Adresa</small><b>{ADR}, 76100 Brčko</b></div></div>
+        <div class="row"><div class="ico" aria-hidden="true">📞</div><div><small>Dalibor: upis, informacije i časovi vožnje</small><a href="tel:+38765803456"><b>065 803 456</b></a></div></div>
+        <div class="row"><div class="ico" aria-hidden="true">📞</div><div><small>Vladana: informacije i teorijska nastava</small><a href="tel:+38765858411"><b>065 858 411</b></a></div></div>
+        <div class="row"><div class="ico" aria-hidden="true">📸</div><div><small>Instagram</small><a href="{IG}" target="_blank" rel="noopener"><b>@driveproautoskola</b></a></div></div>
       </div>
       <div class="map">
         <iframe title="Mapa: Autoškola DrivePro, {ADR}, Brčko" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="{MAPS_EMBED}"></iframe>
@@ -853,11 +853,11 @@ def kontakt():
     body = f'''<section class="sec"><div class="wrap">
 <div class="ct rvl" style="margin-top:0">
   <div class="card tilt"><i class="gl"></i>
-    <div class="row"><div class="ico">📍</div><div><small>Adresa</small><b>{ADR}, 76100 Brčko</b></div></div>
-    <div class="row"><div class="ico">📞</div><div><small>Dalibor: upis, informacije i časovi vožnje</small><a href="tel:+38765803456"><b>065 803 456</b></a></div></div>
-    <div class="row"><div class="ico">📞</div><div><small>Vladana: informacije i teorijska nastava</small><a href="tel:+38765858411"><b>065 858 411</b></a></div></div>
-    <div class="row"><div class="ico">💬</div><div><small>SMS poruka</small><a href="sms:+38765803456"><b>Pošalji poruku Daliboru</b></a></div></div>
-    <div class="row"><div class="ico">📸</div><div><small>Instagram</small><a href="{IG}" target="_blank" rel="noopener"><b>@driveproautoskola</b></a></div></div>
+    <div class="row"><div class="ico" aria-hidden="true">📍</div><div><small>Adresa</small><b>{ADR}, 76100 Brčko</b></div></div>
+    <div class="row"><div class="ico" aria-hidden="true">📞</div><div><small>Dalibor: upis, informacije i časovi vožnje</small><a href="tel:+38765803456"><b>065 803 456</b></a></div></div>
+    <div class="row"><div class="ico" aria-hidden="true">📞</div><div><small>Vladana: informacije i teorijska nastava</small><a href="tel:+38765858411"><b>065 858 411</b></a></div></div>
+    <div class="row"><div class="ico" aria-hidden="true">💬</div><div><small>SMS poruka</small><a href="sms:+38765803456"><b>Pošalji poruku Daliboru</b></a></div></div>
+    <div class="row"><div class="ico" aria-hidden="true">📸</div><div><small>Instagram</small><a href="{IG}" target="_blank" rel="noopener"><b>@driveproautoskola</b></a></div></div>
   </div>
   <div class="map">
     <iframe title="Mapa: Autoškola DrivePro, {ADR}, Brčko" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="{MAPS_EMBED}"></iframe>

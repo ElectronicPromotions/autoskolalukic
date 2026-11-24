@@ -133,7 +133,7 @@ def home():
     faq = ''.join(f'<details class="fq"{" open" if i == 0 else ""}><summary><span class="fn">{i+1:02d}</span><span>{q}</span></summary><p>{a}</p></details>' for i, (q, a) in enumerate(HOME_FAQ))
     tag = '<span class="tag">NAJTRAŽENIJA</span>'
     kat_cards = ''.join(f'<a class="card tilt{" hot" if b == "B" else ""}" href="{p}"><i class="gl"></i>{tag if b == "B" else ""}<span class="lt2">{b}</span><h3>{n} u Brčkom</h3><p>{t}</p><span class="more">Detalji obuke →</span></a>' for p, b, n, t in ALL_KAT)
-    kat_cards += '<a class="card tilt" href="/teorijska-nastava/" style="background:linear-gradient(145deg,#FFE066,#FFCC00);color:#1A1A1A;border:0"><i class="gl"></i><span class="lt2">Dr</span><h3>Teoretska nastava</h3><p style="color:#2B2B2B">Moderna učionica i predavač sa doktoratom iz oblasti saobraćaja. Gradivo učiš s razumijevanjem, ne napamet.</p><span class="more" style="color:var(--yel)">O predavanjima →</span></a>'
+    kat_cards += '<a class="card tilt" href="/teorijska-nastava/" style="background:linear-gradient(145deg,#FFE066,#FFCC00);color:#1A1A1A;border:0"><i class="gl"></i><span class="lt2">Dr</span><h3>Teoretska nastava</h3><p style="color:#2B2B2B">Moderna učionica i predavač sa doktoratom iz oblasti saobraćaja. Gradivo učiš s razumijevanjem, ne napamet.</p><span class="more" style="color:#1A1A1A">O predavanjima →</span></a>'
     hero = f'''<section id="pocetna" class="hero">
   <div class="orb o1"></div><div class="orb o2"></div>
   <div class="wrap hg">
@@ -170,10 +170,10 @@ def home():
       <li><b>Tina Ujevića 8</b><span>Brčko, 065 537 043</span></li>
     </ul>
     <div class="g4 rvl">
-      <div class="card tilt"><i class="gl"></i><div class="ico">🤝</div><h3>Podrška umjesto pritiska</h3><p>Učiš strpljivo, bez stresa i u opuštenoj atmosferi. Svaka greška dobije objašnjenje, a ne ukor.</p></div>
-      <div class="card tilt"><i class="gl"></i><div class="ico">🎓</div><h3>Stručni kadar</h3><p>Predavanja vodi Doc. dr Violeta Lukić Vujadinović, doktor nauka iz oblasti saobraćaja, licencirani predavač teoretske nastave i NLP Master.</p></div>
-      <div class="card tilt"><i class="gl"></i><div class="ico">🏆</div><h3>25 godina tradicije</h3><p>Već četvrt vijeka osposobljavamo vozače u Brčkom i tačno znamo šta je potrebno za siguran početak.</p></div>
-      <div class="card tilt"><i class="gl"></i><div class="ico">🚗</div><h3>Realna vožnja</h3><p>Pripremamo te za stvarni saobraćaj, a ne samo za poligon, da voziš sigurno i kad dobiješ dozvolu.</p></div>
+      <div class="card tilt"><i class="gl"></i><div class="ico" aria-hidden="true">🤝</div><h3>Podrška umjesto pritiska</h3><p>Učiš strpljivo, bez stresa i u opuštenoj atmosferi. Svaka greška dobije objašnjenje, a ne ukor.</p></div>
+      <div class="card tilt"><i class="gl"></i><div class="ico" aria-hidden="true">🎓</div><h3>Stručni kadar</h3><p>Predavanja vodi Doc. dr Violeta Lukić Vujadinović, doktor nauka iz oblasti saobraćaja, licencirani predavač teoretske nastave i NLP Master.</p></div>
+      <div class="card tilt"><i class="gl"></i><div class="ico" aria-hidden="true">🏆</div><h3>25 godina tradicije</h3><p>Već četvrt vijeka osposobljavamo vozače u Brčkom i tačno znamo šta je potrebno za siguran početak.</p></div>
+      <div class="card tilt"><i class="gl"></i><div class="ico" aria-hidden="true">🚗</div><h3>Realna vožnja</h3><p>Pripremamo te za stvarni saobraćaj, a ne samo za poligon, da voziš sigurno i kad dobiješ dozvolu.</p></div>
     </div>
     <p class="ctr"><a class="more-link" href="/o-nama/">Više o Autoškoli Lukić →</a></p>
     <div class="quick rvl">
@@ -256,10 +256,10 @@ def home():
     <h2 class="t rvl">Autoškola Brčko: <em>kontakt i lokacija</em></h2>
     <div class="ct rvl">
       <div class="card tilt"><i class="gl"></i>
-        <div class="row"><div class="ico">📍</div><div><small>Adresa</small><b>Tina Ujevića 8, 76100 Brčko</b></div></div>
-        <div class="row"><div class="ico">📞</div><div><small>Violeta, upis i informacije</small><a href="tel:+38765537043"><b>065 537 043</b></a></div></div>
-        <div class="row"><div class="ico">📞</div><div><small>Dalibor, časovi vožnje</small><a href="tel:+38765803456"><b>065 803 456</b></a></div></div>
-        <div class="row"><div class="ico">📸</div><div><small>Instagram</small><a href="https://www.instagram.com/autoskolalukic" target="_blank" rel="noopener"><b>@autoskolalukic</b></a></div></div>
+        <div class="row"><div class="ico" aria-hidden="true">📍</div><div><small>Adresa</small><b>Tina Ujevića 8, 76100 Brčko</b></div></div>
+        <div class="row"><div class="ico" aria-hidden="true">📞</div><div><small>Violeta, upis i informacije</small><a href="tel:+38765537043"><b>065 537 043</b></a></div></div>
+        <div class="row"><div class="ico" aria-hidden="true">📞</div><div><small>Dalibor, časovi vožnje</small><a href="tel:+38765803456"><b>065 803 456</b></a></div></div>
+        <div class="row"><div class="ico" aria-hidden="true">📸</div><div><small>Instagram</small><a href="https://www.instagram.com/autoskolalukic" target="_blank" rel="noopener"><b>@autoskolalukic</b></a></div></div>
       </div>
       <div class="map">
         <iframe title="Mapa: Autoškola Lukić, Tina Ujevića 8, Brčko" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Tina+Ujevi%C4%87a+8+Br%C4%8Dko+76100&amp;output=embed"></iframe>
@@ -879,11 +879,11 @@ def kontakt():
     body = f'''<section class="sec"><div class="wrap">
 <div class="ct rvl" style="margin-top:0">
   <div class="card tilt"><i class="gl"></i>
-    <div class="row"><div class="ico">📍</div><div><small>Adresa</small><b>Tina Ujevića 8, 76100 Brčko</b></div></div>
-    <div class="row"><div class="ico">📞</div><div><small>Violeta: upis, cijene, rate, predavanja</small><a href="tel:+38765537043"><b>065 537 043</b></a></div></div>
-    <div class="row"><div class="ico">📞</div><div><small>Dalibor: termini časova vožnje</small><a href="tel:+38765803456"><b>065 803 456</b></a></div></div>
-    <div class="row"><div class="ico">💬</div><div><small>SMS poruka</small><a href="sms:+38765537043"><b>Pošalji poruku Violeti</b></a></div></div>
-    <div class="row"><div class="ico">📸</div><div><small>Instagram</small><a href="https://www.instagram.com/autoskolalukic" target="_blank" rel="noopener"><b>@autoskolalukic</b></a></div></div>
+    <div class="row"><div class="ico" aria-hidden="true">📍</div><div><small>Adresa</small><b>Tina Ujevića 8, 76100 Brčko</b></div></div>
+    <div class="row"><div class="ico" aria-hidden="true">📞</div><div><small>Violeta: upis, cijene, rate, predavanja</small><a href="tel:+38765537043"><b>065 537 043</b></a></div></div>
+    <div class="row"><div class="ico" aria-hidden="true">📞</div><div><small>Dalibor: termini časova vožnje</small><a href="tel:+38765803456"><b>065 803 456</b></a></div></div>
+    <div class="row"><div class="ico" aria-hidden="true">💬</div><div><small>SMS poruka</small><a href="sms:+38765537043"><b>Pošalji poruku Violeti</b></a></div></div>
+    <div class="row"><div class="ico" aria-hidden="true">📸</div><div><small>Instagram</small><a href="https://www.instagram.com/autoskolalukic" target="_blank" rel="noopener"><b>@autoskolalukic</b></a></div></div>
   </div>
   <div class="map">
     <iframe title="Mapa: Autoškola Lukić, Tina Ujevića 8, Brčko" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Tina+Ujevi%C4%87a+8+Br%C4%8Dko+76100&amp;output=embed"></iframe>

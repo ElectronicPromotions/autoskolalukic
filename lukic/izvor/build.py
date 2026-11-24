@@ -72,10 +72,10 @@ def footer():
       <p>25 godina iskustva u obuci vozača u Brčkom. Kategorije A, B, C1, C, CE i D, teorija kod doktora nauka iz saobraćaja i plaćanje na rate.</p>
       <a class="ig" href="https://www.instagram.com/autoskolalukic" target="_blank" rel="noopener">📸 @autoskolalukic</a>
     </div>
-    <div><h4>Obuka</h4>{k}<a href="/kategorije/">Sve kategorije</a></div>
-    <div><h4>Stranica</h4>{s}</div>
+    <div><h2 class="fh">Obuka</h2>{k}<a href="/kategorije/">Sve kategorije</a></div>
+    <div><h2 class="fh">Stranica</h2>{s}</div>
     <div>
-      <h4>Kontakt</h4>
+      <h2 class="fh">Kontakt</h2>
       <span>📍 Tina Ujevića 8, 76100 Brčko</span>
       <a href="tel:+38765537043">📞 Violeta: 065 537 043</a>
       <a href="tel:+38765803456">📞 Dalibor: 065 803 456</a>
