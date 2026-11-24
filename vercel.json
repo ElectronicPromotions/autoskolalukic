@@ -7,16 +7,7 @@
   "trailingSlash": true,
   "headers": [
     {
-      "source": "/(autoskolalukic|autoskoladrivepro)/img/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=2592000, stale-while-revalidate=86400"
-        }
-      ]
-    },
-    {
-      "source": "/((autoskolalukic|autoskoladrivepro)/)?assets/(.*)",
+      "source": "/assets/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
@@ -25,16 +16,52 @@
       ]
     },
     {
-      "source": "/(.*)\\.(png|ico|svg|jpg|webmanifest)",
+      "source": "/autoskolalukic/assets/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=604800"
+          "value": "public, max-age=31536000, immutable"
         }
       ]
     },
     {
-      "source": "/(autoskolalukic|autoskoladrivepro)/podaci/(.*)",
+      "source": "/autoskoladrivepro/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/autoskolalukic/img/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=2592000, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
+      "source": "/autoskoladrivepro/img/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=2592000, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
+      "source": "/autoskolalukic/podaci/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache"
+        }
+      ]
+    },
+    {
+      "source": "/autoskoladrivepro/podaci/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
