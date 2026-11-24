@@ -147,14 +147,14 @@
   if(na){
     var fbw=$('#nw-fb');
     if(P.facebookStranica&&fbw){
-      var w=Math.max(280,Math.min(500,Math.floor(fbw.clientWidth||500)));
+      var w=Math.max(180,Math.min(500,Math.floor((fbw.clientWidth||502)-2)));
       fbw.innerHTML='<div class="fbx"><div class="fbh">f &nbsp;Uživo sa Facebooka</div><iframe title="Facebook objave Autoškole Lukić" loading="lazy" src="https://www.facebook.com/plugins/page.php?href='+encodeURIComponent(P.facebookStranica)+'&tabs=timeline&width='+w+'&height=900&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false" style="min-height:900px" allow="encrypted-media; clipboard-write; picture-in-picture; web-share"></iframe></div>';
       var fl2=$('#nw-fblink');if(fl2){fl2.href=P.facebookStranica;fl2.hidden=false}
     }else if(fbw){fbw.hidden=true;na.classList.add('solo')}
     load('o',function(data){
       if(data&&data.primjer)$('#nw-banner').hidden=false;
       var list=sortPosts(data&&data.objave),box=$('#nw-list');
-      if(!list.length&&P.facebookStranica){box.hidden=true;na.classList.add('fbonly');return}
+      if(!list.length&&P.facebookStranica){box.hidden=true;na.classList.add('fbonly');var f2=fbw&&fbw.querySelector('iframe');if(f2){var w2=Math.max(180,Math.min(500,Math.floor(fbw.clientWidth-2)));f2.src=f2.src.replace(/width=\d+/,'width='+w2)}return}
       box.innerHTML=list.length?list.map(function(o){return postCard(o,data.autor,true)}).join(''):'<div class="empty"><b>Objave uskoro</b>Prati nas i na Instagramu <a href="https://www.instagram.com/autoskolalukic" target="_blank" rel="noopener">@autoskolalukic</a>.</div>';
       box.onclick=function(e){var b=e.target.closest('.rm');if(!b)return;var t=b.closest('.pb').querySelector('.tx');t.classList.toggle('cl');b.textContent=t.classList.contains('cl')?'Prikaži više ↓':'Prikaži manje ↑'};
     });
@@ -164,7 +164,7 @@
   if(hn){
     load('o',function(data){
       var list=sortPosts(data&&data.objave).filter(function(o){return o.tekst||o.naslov}).slice(0,3);
-      if(!list.length&&P.facebookStranica){hn.classList.add('fbonly');hn.innerHTML='<div class="fbx"><div class="fbh">f &nbsp;Najnovije sa Facebooka</div><iframe title="Facebook objave Autoškole Lukić" loading="lazy" src="https://www.facebook.com/plugins/page.php?href='+encodeURIComponent(P.facebookStranica)+'&tabs=timeline&width=500&height=640&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false" style="min-height:640px" allow="encrypted-media; clipboard-write; picture-in-picture; web-share"></iframe></div>';return}
+      if(!list.length&&P.facebookStranica){hn.classList.add('fbonly');var hw=Math.max(180,Math.min(500,Math.floor((hn.clientWidth||502)-2))),hh=innerWidth<=600?560:640;hn.innerHTML='<div class="fbx"><div class="fbh">f &nbsp;Najnovije sa Facebooka</div><iframe title="Facebook objave Autoškole Lukić" loading="lazy" src="https://www.facebook.com/plugins/page.php?href='+encodeURIComponent(P.facebookStranica)+'&tabs=timeline&width='+hw+'&height='+hh+'&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false" style="min-height:'+hh+'px;height:'+hh+'px" allow="encrypted-media; clipboard-write; picture-in-picture; web-share"></iframe></div>';return}
       if(!list.length){var s=hn.closest('section');if(s)s.hidden=true;return}
       hn.innerHTML=list.map(function(o){return postCard(o,data.autor,true,'h3')}).join('');
     });

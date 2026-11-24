@@ -189,7 +189,7 @@ def home():
     def fbframe(s):
         if not s['facebook']:
             return ''
-        return f'''<div class="fbw">{fbhead(s, 'Uživo sa Facebooka')}<iframe title="Objave {e(s['naziv'].replace('Autoškola', 'Autoškole'))} na Facebooku" src="https://www.facebook.com/plugins/page.php?href={urllib.parse.quote(s['facebook'], safe='')}&tabs=timeline&width=500&height=640&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false" width="500" height="640" scrolling="no" frameborder="0" allowfullscreen="true" allow="clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy"></iframe></div>'''
+        return f'''<div class="fbw">{fbhead(s, 'Uživo sa Facebooka')}<iframe title="Objave {e(s['naziv'].replace('Autoškola', 'Autoškole'))} na Facebooku" data-fb="{urllib.parse.quote(s['facebook'], safe='')}" height="640" scrolling="no" frameborder="0" allowfullscreen="true" allow="clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy"></iframe></div>'''
     fb = fbframe(L)
     if D['facebook'] and not D.get('facebook_prozor', True):
         dcard = f'<div class="fbw fbcard">{fbhead(D, "Facebook")}<div class="fbc"><b>Autoškola DrivePro na Facebooku</b><p>Obavještenja o upisu, terminima i ispitima objavljuju se na Facebook stranici i Instagramu škole.</p><div class="fbb"><a class="btn" href="{D["facebook"]}" target="_blank" rel="noopener">Otvori Facebook stranicu</a><a class="btn alt" href="https://www.instagram.com/driveproautoskola" target="_blank" rel="noopener">Instagram</a></div></div></div>'

@@ -1181,3 +1181,8 @@ footer .cr a{color:var(--dp-a)}
 .fbcard .fbc p{margin:0 0 18px;color:#5A6485;line-height:1.6}
 .fbcard .fbb{display:flex;flex-wrap:wrap;gap:10px}
 .fbcard .fbb .btn{flex:1 1 200px;justify-content:center}
+
+/* Facebook prozor nikad širi od Facebook sadržaja (500px) */
+.nw.fbonly #nw-fb{max-width:502px;width:100%;margin-inline:auto}
+.nwp.fbonly .fbx,#nw-fb .fbx{max-width:502px}
+.nwp.fbonly{grid-template-columns:minmax(0,502px)!important}

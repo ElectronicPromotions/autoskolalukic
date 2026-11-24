@@ -859,3 +859,8 @@ header:not(.sc) nav.d a:not(.btn)::after{background:#FFCC00}
 @media(max-width:600px){.bkf .bkt small{font-size:9px}.tag{font-size:10.5px!important}}
 
 @media (max-width:960px),(pointer:coarse){.more-link{display:inline-block;padding:10px 2px;margin:-10px -2px}nav.d>a{padding-inline:6px;margin-inline:-6px}}
+
+/* Facebook prozor nikad širi od Facebook sadržaja (500px) */
+.nw.fbonly #nw-fb{max-width:502px;width:100%;margin-inline:auto}
+.nwp.fbonly .fbx,#nw-fb .fbx{max-width:502px}
+.nwp.fbonly{grid-template-columns:minmax(0,502px)!important}
