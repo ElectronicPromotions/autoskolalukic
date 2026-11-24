@@ -1094,16 +1094,21 @@ footer .cr a{color:var(--dp-a)}
 #mm a.up{font-weight:700;border-bottom:1px solid rgba(0,0,0,.08);margin-bottom:6px}
 .fbar a{color:inherit;text-decoration:underline;text-underline-offset:3px}
 
-/* ===== DUGME ZA POVRATAK NA AUTOŠKOLE BRČKO (traka na vrhu) ===== */
-.brbar{position:fixed;top:0;left:0;right:0;height:36px;z-index:101;background:#1F2329;display:flex;align-items:center}
-.brbar .wrap{width:100%;display:flex;align-items:center}
-.brbar a{display:inline-flex;align-items:center;gap:8px;height:28px;padding:0 12px 0 8px;margin-left:-8px;border-radius:4px;color:#fff;font-size:13px;font-weight:600;text-decoration:none;letter-spacing:.01em}
-.brbar a:hover,.brbar a:focus-visible{background:rgba(255,255,255,.12)}
-.brbar a svg{color:#FB923C}
-body{padding-top:36px}
-header{top:36px!important}
-html{scroll-padding-top:116px}
-#mm{max-height:calc(100vh - 100px)!important}
+/* ===== DUGME ZA POVRATAK NA AUTOŠKOLE BRČKO (u zaglavlju, lijevo od logotipa) ===== */
+.bkb{display:inline-flex;align-items:center;gap:10px;flex:none;height:44px;padding:0 16px 0 5px;margin-right:14px;border-radius:999px;background:#F4F2EF;border:1px solid rgba(0,0,0,.07);color:#1F2329;text-decoration:none;transition:background .2s,box-shadow .2s,border-color .2s}
+.bki{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#1F2329;color:#FB923C;flex:none;transition:transform .25s}
+.bkt{display:flex;flex-direction:column;line-height:1.05;white-space:nowrap}
+.bkt small{font:700 9.5px/1 Inter,system-ui,sans-serif;letter-spacing:.09em;text-transform:uppercase;color:#6B6F76;margin-bottom:3px}
+.bkt b{font:800 13.5px/1 Montserrat,system-ui,sans-serif;color:#1F2329}
+.bkb:hover{background:#fff;border-color:rgba(0,0,0,.1);box-shadow:0 8px 20px -12px rgba(0,0,0,.4)}
+.bkb:hover .bki{transform:translateX(-3px)}
+.bkb:focus-visible{outline:3px solid #FB923C;outline-offset:3px}
+.bkd{width:1px;height:30px;background:rgba(0,0,0,.12);margin-right:18px;flex:none}
+.hd>.logo{margin-right:auto}
+@media(max-width:1220px){.bkt{display:none}.bkb{padding:4px;height:auto;margin-right:12px}.bkd{margin-right:14px}}
+@media(max-width:600px){.bki{width:36px;height:36px}.bkb{margin-right:10px}.bkd{height:26px;margin-right:12px}}
+.lite .bkb,.lite .bki{transition:none}
+
 
 
 /* ===== BRZINA: točkovi se okreću na grafičkoj kartici (ranije ~30% procesora telefona) ===== */

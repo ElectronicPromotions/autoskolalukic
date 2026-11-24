@@ -60,9 +60,9 @@ def header(path):
            ''.join(f'<a class="sub2" href="{p}"{cur(p,path)}>{n}</a>' for p, n, s in KAT) +
            f'<a class="sub2" href="/kategorije/">Sve kategorije</a><span class="mg">Autoškola</span>' +
            ''.join(f'<a href="{p}"{cur(p,path)}>{n}</a>' for p, n in MAIN + ONAMA))
-    return f'''<!--H--><div class="brbar"><div class="wrap"><a href="/__brcko__/"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>Nazad na Autoškole Brčko</a></div></div><header id="hd">
+    return f'''<!--H--><header id="hd">
   <div class="wrap hd">
-    <a href="/" class="logo dpl" aria-label="Autoškola DrivePro, početna stranica">{LOGO}</a>
+    <a class="bkb" href="/__brcko__/" aria-label="Nazad na Autoškole Brčko" title="Nazad na Autoškole Brčko"><span class="bki"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></span><span class="bkt"><small>Nazad na</small><b>Autoškole Brčko</b></span></a><span class="bkd" aria-hidden="true"></span><a href="/" class="logo dpl" aria-label="Autoškola DrivePro, početna stranica">{LOGO}</a>
     <nav class="d" aria-label="Glavni meni">
       <div class="dd"><button type="button" aria-haspopup="true" aria-expanded="false">O nama</button><div class="ddm">{dd1}</div></div>
       <div class="dd"><button type="button" aria-haspopup="true" aria-expanded="false">Kategorije</button><div class="ddm">{dd2}</div></div>
