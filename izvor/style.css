@@ -245,3 +245,5 @@ footer{margin-top:96px;background:var(--g);color:#fff}
   .fb nav a{padding:10px 0}
   .fb nav{gap:28px}
 }
+
+.news .link+.link{margin-left:24px}
