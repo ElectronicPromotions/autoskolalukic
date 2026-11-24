@@ -236,3 +236,12 @@ footer{margin-top:96px;background:var(--g);color:#fff}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 .ins em.lukic.drivepro{color:var(--o2)}
+
+/* ===== SVI UREĐAJI: veće površine za dodir na telefonu i tabletu ===== */
+@media (max-width:960px),(pointer:coarse){
+  .strip a,.ci a,.hero .link,.news .link,.kk .link,.fb span a{display:inline-block;padding:9px 4px;margin:-9px -4px}
+  .ft h4 a{display:inline-block;padding:8px 0;margin:-8px 0}
+  .ft a.ph{padding:8px 0}
+  .fb nav a{padding:10px 0}
+  .fb nav{gap:28px}
+}

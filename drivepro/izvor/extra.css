@@ -830,3 +830,17 @@ footer .cr a{color:var(--dp-a)}
 .bki svg{transition:transform .25s}
 .bkb:hover .bki svg,.bkf:hover .bki svg{transform:translateX(-2px)}
 @media(max-width:600px){.bkf{padding-left:5px}}
+
+/* ===== SVI UREĐAJI: veće površine za dodir na telefonu i tabletu (raspored se ne mijenja) ===== */
+@media (max-width:960px),(pointer:coarse){
+  .bc a{display:inline-block;padding:11px 6px;margin:-11px -6px}
+  footer .fgrid div>a{padding:9px 0}
+  footer .fgrid div>span{display:block;padding:6px 0}
+  .fbar a{display:inline-block;padding:12px 4px;margin:-12px -4px}
+  .card .row a{display:inline-block;padding:10px 0;margin:-10px 0}
+}
+/* čitljiviji sitni natpisi */
+.bkt small{font-size:9.5px}
+@media(max-width:600px){.bkf .bkt small{font-size:9px}.tag{font-size:10.5px!important}}
+
+@media (max-width:960px),(pointer:coarse){.more-link{display:inline-block;padding:10px 2px;margin:-10px -2px}nav.d>a{padding-inline:6px;margin-inline:-6px}}
