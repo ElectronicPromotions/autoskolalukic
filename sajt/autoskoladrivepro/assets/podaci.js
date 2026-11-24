@@ -143,10 +143,13 @@
   }
   function sortPosts(a){return (a||[]).slice().sort(function(x,y){var a1=pd(x.datum),b1=pd(y.datum);return (b1||0)-(a1||0)})}
 
+  function fbCard(){return '<div class="fbx fbcard"><div class="fbh">f &nbsp;Autoškola DrivePro na Facebooku</div><div class="fbc"><p>Obavještenja o upisu, terminima i ispitima pratite na našoj Facebook stranici i na Instagramu.</p><div class="fbb"><a class="btn btn-y" href="'+P.facebookStranica+'" target="_blank" rel="noopener">Otvori Facebook stranicu →</a><a class="btn btn-g" href="https://www.instagram.com/driveproautoskola" target="_blank" rel="noopener">📸 Instagram</a></div></div></div>'}
+  var FBOK=P.facebookPrikaz!==false;
   var na=$('#nw-app');
   if(na){
     var fbw=$('#nw-fb');
-    if(P.facebookStranica&&fbw){
+    if(P.facebookStranica&&fbw&&!FBOK){fbw.innerHTML=fbCard()}
+    else if(P.facebookStranica&&fbw){
       var w=Math.max(280,Math.min(500,Math.floor(fbw.clientWidth||500)));
       fbw.innerHTML='<div class="fbx"><div class="fbh">f &nbsp;Uživo sa Facebooka</div><iframe title="Facebook objave Autoškole DrivePro" loading="lazy" src="https://www.facebook.com/plugins/page.php?href='+encodeURIComponent(P.facebookStranica)+'&tabs=timeline&width='+w+'&height=900&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false" style="min-height:900px" allow="encrypted-media; clipboard-write; picture-in-picture; web-share"></iframe></div>';
       var fl2=$('#nw-fblink');if(fl2){fl2.href=P.facebookStranica;fl2.hidden=false}
@@ -164,6 +167,7 @@
   if(hn){
     load('o',function(data){
       var list=sortPosts(data&&data.objave).filter(function(o){return o.tekst||o.naslov}).slice(0,3);
+      if(!list.length&&P.facebookStranica&&!FBOK){hn.classList.add('fbonly');hn.innerHTML=fbCard();return}
       if(!list.length&&P.facebookStranica){hn.classList.add('fbonly');hn.innerHTML='<div class="fbx"><div class="fbh">f &nbsp;Najnovije sa Facebooka</div><iframe title="Facebook objave Autoškole DrivePro" loading="lazy" src="https://www.facebook.com/plugins/page.php?href='+encodeURIComponent(P.facebookStranica)+'&tabs=timeline&width=500&height=640&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false" style="min-height:640px" allow="encrypted-media; clipboard-write; picture-in-picture; web-share"></iframe></div>';return}
       if(!list.length||(data&&data.primjer)){var s=hn.closest('section');if(s)s.hidden=true;return}
       hn.innerHTML=list.map(function(o){return postCard(o,data.autor,true,'h3')}).join('');

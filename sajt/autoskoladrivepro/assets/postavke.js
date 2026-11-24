@@ -9,6 +9,10 @@ window.POSTAVKE = {
   // Kad se upiše, na stranici /novosti/ se automatski prikazuju najnovije objave sa te stranice.
   // Ako ostane prazno, prikazuju se samo objave upisane u podaci/objave.js (ili u Google tabeli ispod).
   facebookStranica: "https://www.facebook.com/61558353308315",
+  // Da li se objave prikazuju direktno na sajtu (Facebook prozor). Facebook trenutno ne dozvoljava
+  // prikaz ove stranice na drugim sajtovima, pa stoji false: umjesto prozora ide kartica sa linkom.
+  // Kad se na Facebooku uklone ograničenja stranice, promijeniti u true.
+  facebookPrikaz: false,
 
   // 2) GOOGLE TABELA ZA OBJAVE (opcionalno, najlakše za uređivanje sa telefona)
   // Ako se ovdje upiše link na Google tabelu objavljenu kao CSV, sajt čita objave iz nje

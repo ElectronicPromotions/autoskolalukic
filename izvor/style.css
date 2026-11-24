@@ -247,3 +247,10 @@ footer{margin-top:96px;background:var(--g);color:#fff}
 }
 
 .news .link+.link{margin-left:24px}
+.fbcard{background:#fff;border:1px solid var(--line);border-radius:4px;padding:28px;margin-bottom:16px;max-width:526px}
+.fbcard b{display:block;font-size:20px;font-weight:800;letter-spacing:-.01em}
+.fbcard p{color:var(--g2);margin-top:8px}
+.fbb{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.fbb .btn{flex:1 1 180px}
+.fbb .btn.alt{background:var(--g)}
+.fbb .btn.alt:hover{background:#000}

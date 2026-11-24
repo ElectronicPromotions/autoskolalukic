@@ -844,3 +844,9 @@ footer .cr a{color:var(--dp-a)}
 @media(max-width:600px){.bkf .bkt small{font-size:9px}.tag{font-size:10.5px!important}}
 
 @media (max-width:960px),(pointer:coarse){.more-link{display:inline-block;padding:10px 2px;margin:-10px -2px}nav.d>a{padding-inline:6px;margin-inline:-6px}}
+
+/* Facebook kartica (kad Facebook ne dozvoljava prikaz objava na sajtu) */
+.fbcard .fbc{padding:22px 22px 24px}
+.fbcard .fbc p{margin:0 0 18px;color:#5A6485;line-height:1.6}
+.fbcard .fbb{display:flex;flex-wrap:wrap;gap:10px}
+.fbcard .fbb .btn{flex:1 1 200px;justify-content:center}

@@ -31,6 +31,7 @@ SKOLE = {
         'email': '',
         'radno': '',
         'facebook': 'https://www.facebook.com/61558353308315',
+        'facebook_prozor': False,   # Facebook trenutno ne dozvoljava prikaz objava ove stranice; True kad se srede postavke
         'kategorije': ['A', 'B', 'C1', 'C', 'CE', 'D'],
         'opis': 'Instruktori su diplomirani inženjeri saobraćaja. Teorijska nastava je besplatna. Moguće plaćanje na rate.',
         'boja': '#1F2329',
@@ -188,7 +189,11 @@ def home():
             return ''
         return f'''<div class="fbw"><iframe title="Objave {e(s['naziv'].replace('Autoškola', 'Autoškole'))} na Facebooku" src="https://www.facebook.com/plugins/page.php?href={urllib.parse.quote(s['facebook'], safe='')}&tabs=timeline&width=500&height=600&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false" width="500" height="600" style="border:none;overflow:hidden;width:100%;max-width:500px" scrolling="no" frameborder="0" allowfullscreen="true" allow="clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy"></iframe></div>'''
     fb = fbframe(L)
-    dfb = (fbframe(D) or '<p class="soon-b">Objave Autoškole DrivePro pojavit će se ovdje čim povežemo njihovu Facebook stranicu.</p>') + f'<a class="link" href="{DRIVEPRO}/novosti/">Sve novosti na stranici DrivePro</a>' + (f'<a class="link fbl" href="{D["facebook"]}" target="_blank" rel="noopener">DrivePro na Facebooku</a>' if D['facebook'] else '')
+    if D['facebook'] and not D.get('facebook_prozor', True):
+        dcard = f'<div class="fbcard"><b>Autoškola DrivePro na Facebooku</b><p>Obavještenja o upisu, terminima i ispitima objavljuju se na Facebook stranici i Instagramu škole.</p><div class="fbb"><a class="btn" href="{D["facebook"]}" target="_blank" rel="noopener">Otvori Facebook stranicu</a><a class="btn alt" href="https://www.instagram.com/driveproautoskola" target="_blank" rel="noopener">Instagram</a></div></div>'
+    else:
+        dcard = ''
+    dfb = dcard + f'<a class="link" href="{DRIVEPRO}/novosti/">Sve novosti na stranici DrivePro</a>' if dcard else (fbframe(D) or '<p class="soon-b">Objave Autoškole DrivePro pojavit će se ovdje čim povežemo njihovu Facebook stranicu.</p>') + f'<a class="link" href="{DRIVEPRO}/novosti/">Sve novosti na stranici DrivePro</a>' + (f'<a class="link fbl" href="{D["facebook"]}" target="_blank" rel="noopener">DrivePro na Facebooku</a>' if D['facebook'] else '')
 
     ld = {"@context": "https://schema.org", "@type": "Organization", "name": "Autoškole Brčko", "url": DOMAIN + "/",
           "member": [{"@type": "DrivingSchool", "name": L['naziv'], "url": L['url'], "telephone": "+38765537043",
@@ -253,7 +258,7 @@ def home():
 </section>
 
 <section class="wrap sec" id="novosti">
-<div class="sec-h"><h2 class="d">Novosti</h2><p>Objave škola sa Facebooka, automatski.</p></div>
+<div class="sec-h"><h2 class="d">Novosti</h2><p>Najnovije objave i obavještenja obje škole.</p></div>
 <div class="news">
 <div><h3 class="nh"><i style="background:#C2410C"></i>Autoškola Lukić</h3>{fb}<a class="link" href="{LUKIC}/novosti/">Sve novosti na stranici Lukić</a></div>
 <div><h3 class="nh"><i style="background:#1F2329"></i>Autoškola DrivePro</h3>{dfb}</div>
