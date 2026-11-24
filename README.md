@@ -1,4 +1,4 @@
-# Autoškole Brčko (autoskolebrcko.vercel.app, kasnije pravi domen)
+# Autoškole Brčko (autoskolebrcko.com)
 
 Jedan sajt, jedan domen:
 - `/`: zajednička početna Autoškole Brčko
@@ -17,4 +17,4 @@ Izmjene:
 
 Podaci škola za zajedničku početnu (adresa, telefoni, kategorije, Facebook) su u `izvor/build.py`, rječnik `SKOLE`.
 
-Domen: glavna adresa je u `izvor/build.py` (DOMAIN). Sada je https://autoskolebrcko.vercel.app; kad se kupi pravi domen, promijeniti DOMAIN i ponovo pokrenuti build.
+Domen: glavna adresa je u `izvor/build.py` (DOMAIN). Sada je https://autoskolebrcko.com.

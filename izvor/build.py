@@ -3,7 +3,7 @@
 Sve podatke o školama mijenjaš u rječniku SKOLE ispod. Prazno ('' ili []) = prikazuje se "uskoro"."""
 import os, json, html, urllib.parse
 
-DOMAIN = 'https://autoskolebrcko.vercel.app'   # privremeno, dok se ne kupi pravi domen
+DOMAIN = 'https://autoskolebrcko.com'
 LUKIC = '/autoskolalukic'                              # Lukić sajt je dio ovog sajta
 DRIVEPRO = '/autoskoladrivepro'
 LUKIC_IZVOR = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'lukic', 'sajt')
