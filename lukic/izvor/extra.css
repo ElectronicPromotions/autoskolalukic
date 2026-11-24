@@ -455,20 +455,30 @@ header:not(.sc) nav.d a:not(.btn)::after{background:#FFCC00}
 #mm a.up{font-weight:700;color:#C2410C;border-bottom:1px solid #F1E6C8;margin-bottom:6px}
 .fbar a{color:inherit;text-decoration:underline;text-underline-offset:3px}
 
-/* ===== DUGME ZA POVRATAK NA AUTOŠKOLE BRČKO (u zaglavlju, lijevo od logotipa) ===== */
-.bkb{display:inline-flex;align-items:center;gap:10px;flex:none;height:44px;padding:0 16px 0 5px;margin-right:14px;border-radius:999px;background:#F4F2EF;border:1px solid rgba(0,0,0,.07);color:#1F2329;text-decoration:none;transition:background .2s,box-shadow .2s,border-color .2s}
-.bki{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#1F2329;color:#FB923C;flex:none;transition:transform .25s}
-.bkt{display:flex;flex-direction:column;line-height:1.05;white-space:nowrap}
-.bkt small{font:700 9.5px/1 Inter,system-ui,sans-serif;letter-spacing:.09em;text-transform:uppercase;color:#6B6F76;margin-bottom:3px}
-.bkt b{font:800 13.5px/1 Montserrat,system-ui,sans-serif;color:#1F2329}
-.bkb:hover{background:#fff;border-color:rgba(0,0,0,.1);box-shadow:0 8px 20px -12px rgba(0,0,0,.4)}
-.bkb:hover .bki{transform:translateX(-3px)}
-.bkb:focus-visible{outline:3px solid #FB923C;outline-offset:3px}
-.bkd{width:1px;height:30px;background:rgba(0,0,0,.12);margin-right:18px;flex:none}
+/* ===== DUGME ZA POVRATAK NA AUTOŠKOLE BRČKO ===== */
+/* računar i tablet: tamno dugme sa natpisom, lijevo od logotipa škole */
+.bkb,.bkf{display:inline-flex;align-items:center;gap:10px;flex:none;text-decoration:none;border-radius:999px;background:#1F2329;color:#fff;transition:background .2s,box-shadow .2s,transform .2s}
+.bkb{height:46px;padding:0 18px 0 6px;margin-right:16px;box-shadow:0 6px 16px -10px rgba(0,0,0,.6)}
+.bki{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#FB923C;color:#1F2329;flex:none;transition:transform .25s}
+.bkt{display:flex;flex-direction:column;line-height:1.05;white-space:nowrap;text-align:left}
+.bkt small{font:700 9.5px/1 Inter,system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#C9CDD3;margin-bottom:4px}
+.bkt b{font:800 14px/1 Montserrat,system-ui,sans-serif;color:#fff}
+.bkb:hover,.bkf:hover{background:#000;box-shadow:0 10px 22px -10px rgba(0,0,0,.6)}
+.bkb:hover .bki,.bkf:hover .bki{transform:translateX(-3px)}
+.bkb:focus-visible,.bkf:focus-visible{outline:3px solid #FB923C;outline-offset:3px}
+.bkd{width:1px;height:30px;background:rgba(0,0,0,.14);margin-right:18px;flex:none}
 .hd>.logo{margin-right:auto}
-@media(max-width:1220px){.bkt{display:none}.bkb{padding:4px;height:auto;margin-right:12px}.bkd{margin-right:14px}}
-@media(max-width:600px){.bki{width:36px;height:36px}.bkb{margin-right:10px}.bkd{height:26px;margin-right:12px}}
-.lite .bkb,.lite .bki{transition:none}
+@media(max-width:1220px) and (min-width:1101px){.bkt small{display:none}.bkb{padding-right:14px;margin-right:12px}.bkt b{font-size:13px}.bkd{margin-right:14px}}
+/* telefon: dugme sa natpisom u donjem lijevom uglu (u zaglavlju nema mjesta za natpis) */
+.bkf{display:none}
+@media(max-width:600px){
+  .bkb,.bkd{display:none}
+  .bkf{display:inline-flex;position:fixed;left:14px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:90;height:48px;padding:0 16px 0 7px;box-shadow:0 12px 26px -12px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.12) inset}
+  .bkf .bki{width:34px;height:34px}
+  .bkf .bkt b{font-size:13.5px}
+  html.lock .bkf{display:none}
+}
+.lite .bkb,.lite .bkf,.lite .bki{transition:none}
 
 
 
@@ -485,3 +495,5 @@ header:not(.sc) nav.d a:not(.btn)::after{background:#FFCC00}
 .lite .rvl{opacity:1!important;transform:none!important;transition:none!important}
 .lite .car{filter:none!important;transition:none!important}
 .lite *{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+
+@media(max-width:600px){header:has(#mm.o)+.bkf{display:none}}
