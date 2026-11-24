@@ -838,3 +838,10 @@ header:not(.sc) nav.d a:not(.btn)::after{background:#FFCC00}
 .bkd{height:24px;margin-right:16px}
 @media(max-width:1220px) and (min-width:1101px){.bkt b{font-size:12px}.bkb{padding-right:12px}}
 @media(max-width:600px){.bkf{height:38px;padding:0 13px 0 4px;gap:8px;left:12px;bottom:calc(14px + env(safe-area-inset-bottom))}.bkf .bki{width:28px;height:28px}.bkf .bkt b{font-size:12px}.bkf .bkt small{font-size:8px}}
+
+/* dugme za povratak: krug tačno u zaobljenom kraju (38px dugme, 28px krug, 5px razmak sa svih strana) */
+.bkb,.bkf{padding-left:5px}
+.bkb:hover .bki,.bkf:hover .bki{transform:none}
+.bki svg{transition:transform .25s}
+.bkb:hover .bki svg,.bkf:hover .bki svg{transform:translateX(-2px)}
+@media(max-width:600px){.bkf{padding-left:5px}}
